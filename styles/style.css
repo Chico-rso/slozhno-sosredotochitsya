@@ -1,5 +1,19 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-.page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+.container {
+  padding: 10px;
+}
+
+.header {
+  display: grid;
+  justify-content: end;
+  gap: 40px;
+}
+
+.main__title {
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 82.5%;
 }
