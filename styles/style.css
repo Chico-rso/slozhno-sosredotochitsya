@@ -1,4 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.page {
+  position: relative;
+}
+
+.header__record-img {
+  position: absolute;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+}
 
 .container {
   padding: 10px;
@@ -6,8 +15,12 @@
 
 .header {
   display: grid;
-  justify-content: end;
-  gap: 40px;
+  gap: 65px;
+}
+
+.header__theme-menu {
+  text-align: end;
+  padding-block-start: 76.5px;
 }
 
 .main__title {
