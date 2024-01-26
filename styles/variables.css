@@ -4,9 +4,10 @@
 */
 
 :root {
-  --background-theme: #000028;
+  --background-color: #000028;
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --main-title-color: #DB00FF;
   --header-text-color: #353430;
+  --main-font-size: 18px;
 }
