@@ -14,6 +14,7 @@
   --text-color: #F1B2CE;
   --main-title-color: #DB00FF;
   --background-image: url(../images/cover-image-dark.png);
+  --header-text-color: #000028;
 }
 
 :root {
@@ -22,6 +23,7 @@
   --text-color: #F1B2CE;
   --main-title-color: #DB00FF;
   --background-image: url(../images/cover-image-dark.png);
+  --header-text-color: #000028;
 }
 
 .page.theme_light .page__rec {

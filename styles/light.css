@@ -14,6 +14,7 @@
   --text-color: #353430;
   --main-title-color: #FFC2E6;
   --background-image: url(../images/cover-image-light.png);
+  --header-text-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,6 +24,7 @@
     --text-color: #353430;
     --main-title-color: #FFC2E6;
     --background-image: url(../images/cover-image-light.png);
+    --header-text-color: #353430;
   }
 }
 

@@ -73,15 +73,16 @@
 
 .header {
   display: grid;
-  grid-template-rows: min-content 3fr 4fr 3fr min-content;
-  gap: 40.5px;
 }
 
 .header__theme-menu {
+  margin-block-start: 40.5px;
+  margin-block-end: 65px;
   text-align: end;
 }
 
-.main__title {
+.header__title {
+  margin-block-end: 55px;
   color: var(--main-title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -94,10 +95,17 @@
 }
 
 .header__text {
-  color: var(--text-color);
+  inline-size: min(100%, 491px);
+  margin-block-end: 30px;
+  block-size: fit-content;
+  color: var(--header-text-color);
   font-size: var(--main-font-size);
   font-weight: 700;
   line-height: 130%;
+
+  @media (width >=768px) {
+    justify-self: end;
+  }
 }
 
 .header__theme-menu-item:not(:last-child) {
