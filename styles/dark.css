@@ -13,6 +13,7 @@
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --main-title-color: #DB00FF;
+  --background-image: url(../images/cover-image-dark.png);
 }
 
 :root {
@@ -20,4 +21,9 @@
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --main-title-color: #DB00FF;
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+.page.theme_light .page__rec {
+  visibility: visible;
 }

@@ -1,12 +1,24 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
+  display: grid;
   position: relative;
+  padding: 10px;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .page__rec {
   position: absolute;
-  inset-inline-end: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  inset-inline-end: 20px;
   inset-block-start: 10px;
+  color: var(--accent-color);
 }
 
 .page__rec::before {
@@ -20,15 +32,37 @@
 
 .page__rec::after {
   content: '';
-  display: block;
-  height: 9px;
-  width: 9px;
+  inline-size: 9px;
+  block-size: 9px;
   border-radius: 50%;
-  color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  background-color: var(--accent-color, #ff0070);
 }
 
 .title-decor {
   background: var(--accent-color);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  place-self: start end;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  place-self: end start;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
 }
 
 .header__record-img {
@@ -37,18 +71,14 @@
   inset-block-start: 10px;
 }
 
-.container {
-  padding: 10px;
-}
-
 .header {
   display: grid;
-  gap: 65px;
+  grid-template-rows: min-content 3fr 4fr 3fr min-content;
+  gap: 40.5px;
 }
 
 .header__theme-menu {
   text-align: end;
-  padding-block-start: 76.5px;
 }
 
 .main__title {
@@ -57,11 +87,52 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 82.5%;
+
+  @media (width >=768px) {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 
 .header__text {
   color: var(--text-color);
-  font-size: 18px;
+  font-size: var(--main-font-size);
   font-weight: 700;
   line-height: 130%;
+}
+
+.header__theme-menu-item:not(:last-child) {
+  margin-block-end: 13px;
+}
+
+.header__theme-menu-button {
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+  border: none;
+  font-size: var(--main-font-size);
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--accent-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--accent-color);
+  }
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
 }
