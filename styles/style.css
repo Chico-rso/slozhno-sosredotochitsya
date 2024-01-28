@@ -61,8 +61,8 @@
   place-self: start end;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--decorated-color);
+  border-inline-end: 1px solid var(--decorated-color);
 }
 
 .decorated-zone::after {
@@ -70,8 +70,8 @@
   place-self: end start;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decorated-color);
+  border-inline-start: 1px solid var(--decorated-color);
 }
 
 .header__record-img {
@@ -82,7 +82,7 @@
 
 .header {
   display: grid;
-  margin-block-end: 40px;
+  margin-block-end: 51px;
 
   @media (width >=768px) {
     margin-block-end: 60px;
@@ -189,4 +189,107 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
   pointer-events: none;
+}
+
+.section {
+  margin-block-end: 50px;
+
+  @media (width >=768px) {
+    margin-block-end: 80px;
+  }
+}
+
+.heading-second,
+.heading-third,
+.section-text {
+  font-size: var(--main-font-size);
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.heading-second {
+  color: var(--heading-color-second);
+  margin-block-end: 20px;
+
+  @media (width >=768px) {
+    inline-size: 236px;
+  }
+
+  @media (width >=1024px) {
+    inline-size: 315px;
+  }
+}
+
+.heading-third {
+  color: var(--heading-color-third);
+  margin-block-end: 10px;
+}
+
+.section__article {
+  margin-block-end: 30px;
+}
+
+.section-text {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.flex {
+  @media (width >=768px) {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.focus-strategies__text,
+reasons__text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >=1024px) {
+  .distractions__text {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.visual-aids__images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (width >=768px) {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+}
+
+.visual-aids__img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+@media (width >=768px) {
+  .visual-aids__img:first-child {
+    grid-column: span 2;
+  }
+
+  .visual-aids__img:nth-child(2) {
+    grid-row: span 2;
+  }
+
+  .visual-aids__img:nth-child(3) {
+    grid-row: span 2;
+  }
+
+  .visual-aids__img:last-child {
+    grid-column: span 2;
+  }
 }
