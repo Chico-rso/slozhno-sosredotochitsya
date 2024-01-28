@@ -1,17 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   position: relative;
-  padding: 10px;
   background-color: var(--background-color, #000028);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
-  @media (width >=768px) {
-    padding: 20px;
-  }
 }
 
 .page__rec {
@@ -100,9 +95,12 @@
 .header {
   display: grid;
   margin-block-end: 51px;
+  block-size: 100vh;
+  padding: 10px;
 
   @media (width >=768px) {
     margin-block-end: 60px;
+    padding: 20px;
   }
 }
 
@@ -206,6 +204,14 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color, #FF0070);
   pointer-events: none;
+}
+
+.main {
+  padding: 10px;
+
+  @media (width >=768px) {
+    padding: 20px;
+  }
 }
 
 .section {
@@ -317,6 +323,11 @@ reasons__text {
   justify-content: center;
   align-items: center;
   min-block-size: 100vh;
+  padding: 10px;
+
+  @media (width >=768px) {
+    padding: 20px;
+  }
 }
 
 .footer__title {
@@ -331,8 +342,8 @@ reasons__text {
   border-block-start: 1px solid var(--decorated-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
 }
 
 .footer::after {
@@ -343,6 +354,6 @@ reasons__text {
   border-block-end: 1px solid var(--decorated-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
-  inset-block-end: 0;
-  inset-inline-start: 0;
+  inset-block-end: 20px;
+  inset-inline-start: 20px;
 }
