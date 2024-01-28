@@ -60,11 +60,6 @@
   inset-block-start: 10px;
   inline-size: 25px;
   block-size: 25px;
-
-  @media (width >=768px) {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
-  }
 }
 
 .decorated-zone::after {
@@ -76,10 +71,17 @@
   inset-block-end: 10px;
   inline-size: 25px;
   block-size: 25px;
+}
 
-  @media (width >=768px) {
+@media (width >=768px) {
+  .decorated-zone::after {
     inset-inline-start: 20px;
     inset-block-end: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
   }
 }
 
@@ -223,12 +225,34 @@
   grid-template-rows: repeat(auto-fit, auto);
   gap: 50px;
   padding-inline: clamp(10px, 2.66%, 20px);
+
+  @media (width >=768px) {
+    gap: 80px;
+  }
 }
 
 .section,
 .section__text {
   display: grid;
   gap: 20px;
+}
+
+.reasons,
+.focus-strategies {
+  @media (width >=768px) {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.distractions .heading-second {
+  @media (width >=768px) {
+    max-inline-size: 236px;
+  }
+
+  @media (width >=1024px) {
+    max-inline-size: 315px;
+  }
 }
 
 .heading-second,
@@ -283,6 +307,16 @@ reasons__text {
 
 .visual-aids {
   margin-block-end: 40px;
+
+  @media (width >=768px) {
+    margin-block-end: 60px;
+  }
+}
+
+.visual-aids .heading-third {
+  @media (width >=768px) {
+    margin-block-end: 20px;
+  }
 }
 
 .visual-aids.section {
@@ -306,6 +340,10 @@ reasons__text {
 .visual-aids__img {
   object-fit: cover;
   inline-size: 100%;
+
+  @media (width >=768px) {
+    block-size: 100%;
+  }
 }
 
 @media (width >=768px) {
@@ -340,6 +378,7 @@ reasons__text {
 
 .footer__title {
   align-self: center;
+  justify-self: center;
   margin-block-end: 0;
   text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
 }
