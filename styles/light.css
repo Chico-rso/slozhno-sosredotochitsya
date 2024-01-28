@@ -18,6 +18,7 @@
   --heading-color-second: #353430;
   --heading-color-third: #353430;
   --decorated-color: #353430;
+  --menu-btn-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,6 +32,7 @@
     --heading-color-second: #353430;
     --heading-color-third: #353430;
     --decorated-color: #353430;
+    --menu-btn-color: #353430;
   }
 }
 

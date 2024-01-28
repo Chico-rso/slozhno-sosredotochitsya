@@ -177,7 +177,7 @@
   border: none;
   padding-inline-start: 13px;
   padding-inline-end: 13px;
-  color: var(--accent-color);
+  color: var(--menu-btn-color, #FF0070);
   font-weight: 400;
   font-size: var(--main-font-size, 18px);
   line-height: 22px;
@@ -189,7 +189,7 @@
 
 @media (hover: hover) {
   .header__theme-menu-button:hover {
-    outline: 1px solid var(--accent-color, #FF0070);
+    outline: 1px solid var(--menu-btn-color, #FF0070);
   }
 }
 
@@ -198,11 +198,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--accent-color, #FF0070);
+  border-block-end: 1px solid var(--menu-btn-color, #FF0070);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color, #FF0070);
+  border: 1px solid var(--menu-btn-color, #FF0070);
   pointer-events: none;
 }
 
