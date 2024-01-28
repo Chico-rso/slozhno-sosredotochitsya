@@ -48,7 +48,7 @@
 }
 
 .title-decor {
-  background: var(--accent-color);
+  background: var(--accent-color, #ff0070);
 }
 
 .decorated-zone {
