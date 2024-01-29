@@ -22,20 +22,6 @@
   --background-image: url(../images/cover-image-dark.png);
 }
 
-:root {
-  --background-color: #000028;
-  --accent-color: #FF0070;
-  --text-color: #F1B2CE;
-  --main-title-color: #DB00FF;
-  --header-text-color: #000028;
-  --heading-color-second: #FF0070;
-  --heading-color-third: #000028;
-  --decorated-color: #FF0070;
-  --menu-btn-color: #FF0070;
-  --main-font-size: 18px;
-  --background-image: url(../images/cover-image-dark.png);
-}
-
-.page.theme_light .page__rec {
-  visibility: visible;
+.page.theme_dark .page__rec {
+  display: flex;
 }

@@ -34,8 +34,12 @@
     --decorated-color: #353430;
     --menu-btn-color: #353430;
   }
+
+  .page__rec {
+    display: none;
+  }
 }
 
 .page.theme_light .page__rec {
-  visibility: hidden;
+  display: none;
 }

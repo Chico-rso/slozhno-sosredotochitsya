@@ -245,6 +245,11 @@
     grid-auto-flow: column;
     grid-template-columns: 1fr 2fr;
   }
+
+  @media (width >=1024px) {
+    grid-auto-flow: column;
+    grid-template-columns: 0.97fr 2fr;
+  }
 }
 
 .distractions .heading-second {
@@ -323,7 +328,10 @@ reasons__text {
   }
 }
 
-.visual-aids .heading-third {
+.visual-aids .heading-second {
+  color: var(--heading-color-third, #000028);
+  margin-block-end: 10px;
+
   @media (width >=768px) {
     margin-block-end: 20px;
   }
